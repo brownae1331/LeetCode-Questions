@@ -4,6 +4,7 @@ Question:
         otherwise return false.
 """
 
+
 def hasDuplicate(nums: list[int]) -> bool:
     """
     A set is used which automatically remove duplicates when elements are added.
