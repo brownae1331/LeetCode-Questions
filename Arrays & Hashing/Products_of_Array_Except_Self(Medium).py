@@ -9,6 +9,15 @@ Question:
 
 
 def productExceptSelf(nums: list[int]) -> list[int]:
+    """
+    First calculates the prefix product for each element, which is the product of all numbers before it, storing it in the result array.
+    E.g, for nums=[1, 2, 3, 4], the prefix would be [1, 1, 2, 6].
+    Then, it multiplies each element in res by the postfix, which is the product of all numbers after it, computed in a backward pass.
+    E.g, for nums=[1, 2, 3, 4], the postfix would be [24, 12, 4, 1].
+
+    Time Complexity: O(n) - Loops over nums twice but not nested .
+    Space Complexity: O(1) - As no new data structure are created ignoring the result.
+    """
     res = [0] * len(nums)
 
     prefix = 1
